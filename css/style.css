@@ -1,0 +1,86 @@
+/* Reset simples */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;color:#0c2b3c}
+
+/* Paleta aproximada das telas */
+:root{
+  --azul:#0e3b5c;       /* fundo principal */
+  --azul-esc:#0a2b44;
+  --azul-btn:#0c3f66;
+  --azul-claro:#5593c6;
+  --cinza:#eef2f6;
+  --cinza2:#e1e7ef;
+  --vermelho:#d56a6a;
+  --amarelo:#f2c318;
+}
+
+/* Logo Space */
+.space-logo{font-weight:800;font-size:34px;letter-spacing:1px;color:#fff}
+.space-logo span{color:#8ec3ff}
+
+/* ---------- LOGIN ---------- */
+.login-body{background:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center}
+.login-container{width:980px;height:520px;display:grid;grid-template-columns:48% 52%;border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.login-left{background:var(--azul);position:relative;display:flex;align-items:flex-start;justify-content:flex-start;padding:24px}
+.login-left .space-logo{color:#fff}
+.curvas{position:absolute;inset:auto 0 0 auto;width:80%;height:80%;background:url('../img/curvas.png') no-repeat bottom right/contain;opacity:.9}
+.login-right{background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;gap:18px}
+.marista-logo img{height:80px}
+.login-form{width:100%;max-width:360px;display:flex;flex-direction:column;gap:10px}
+.login-form label{font-size:14px;color:#2a465b}
+.login-form input{border:none;background:#c6d3e5;border-radius:18px;padding:12px 16px;outline:none}
+.btn-primary{align-self:flex-start;background:var(--azul-btn);color:#fff;border:none;padding:10px 22px;border-radius:16px;cursor:pointer}
+.alert-erro{background:#ffe1e1;color:#b72c2c;border:1px solid #f7b3b3;padding:10px 14px;border-radius:10px}
+
+/* ---------- HOME ---------- */
+.home-body{background:var(--azul);min-height:100vh}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:18px 26px}
+.logo-top{height:40px}
+.badge{background:#c6d3e5;color:#1b3550;padding:6px 14px;border-radius:999px;text-decoration:none}
+.home-hero{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;padding:26px 34px}
+.home-card{background:#113f61;color:#fff;border-radius:18px;padding:26px;max-width:560px}
+.home-card .ola{font-size:26px;opacity:.9}
+.home-card .educadores{font-size:42px;color:#ffe88a;margin:.1em 0}
+.home-card .texto{line-height:1.5;margin:8px 0 18px}
+.home-actions .btn-danger{display:inline-block;background:#e66767;color:#fff;text-decoration:none;padding:10px 16px;border-radius:14px}
+.home-foto{position:relative;display:flex;align-items:center;justify-content:center}
+.home-foto img{width:360px;height:360px;object-fit:cover;border-radius:50%}
+.home-foto .decoracoes{position:absolute;inset:0;border-radius:50%;border:6px dashed #ff7b6f;pointer-events:none}
+.space-logo.canto{position:absolute;bottom:24px;right:24px}
+
+/* ---------- SALAS ---------- */
+.salas-body{background:#0f3858;min-height:100vh;overflow-x:hidden}
+.barra-salas{display:flex;align-items:center;justify-content:center;gap:12px;padding:18px;background:#0b2f4a}
+.search input{width:520px;max-width:80vw;border:none;border-radius:24px;background:#fff;padding:10px 16px;outline:none}
+.voltar{color:#fff;text-decoration:none;font-size:22px}
+.lista-salas{max-width:820px;margin:26px auto;display:flex;flex-direction:column;gap:14px;padding:0 16px}
+.btn-sala{display:block;text-decoration:none;text-align:center;padding:14px;border-radius:20px;font-weight:700;color:#fff}
+.btn-sala.clara{background:#5aa0d4}
+.btn-sala.escura{background:#073a62}
+.circulo{position:fixed;border-radius:50%;opacity:.35;pointer-events:none}
+.circulo.amarelo{width:200px;height:200px;background:radial-gradient(#ffd750,#f0b300);bottom:40px;left:-60px}
+.circulo.vermelho{width:220px;height:220px;background:radial-gradient(#ff8a7a,#ff5a4d);top:140px;right:-70px}
+
+/* ---------- AGENDA ---------- */
+.agenda-body{background:#f7fbff;min-height:100vh}
+.agenda-top{background:#083654;color:#fff;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+.agenda-nav .voltar{color:#fff;text-decoration:none;font-size:20px}
+.agenda-header{display:grid;grid-template-columns:80px repeat(5,1fr);gap:8px;align-items:center;padding:10px 10px 0 10px}
+.icone-cal{grid-column:1/2;text-align:center;font-size:26px}
+.dia{background:#fff;border:2px solid #114664;border-radius:8px;padding:6px 8px;text-align:center}
+.dia-num{font-weight:800}
+.dia-nome{font-size:12px;opacity:.8}
+.agenda-titulo-sala{text-align:center;margin:10px 0;font-weight:700;color:#0e3b5c}
+.alert-info{margin:10px auto;max-width:960px;background:#e8f3ff;border:1px solid #b9d7ff;padding:10px 14px;border-radius:10px;color:#0f3a6b}
+.grade{max-width:1100px;margin:6px auto 20px;overflow-x:auto}
+.tabela-agenda{width:100%;border-collapse:separate;border-spacing:0}
+.tabela-agenda th,.tabela-agenda td{border:2px solid #143f5c}
+.tabela-agenda th{background:#0c3c5a;color:#fff;padding:10px}
+.tabela-agenda .hora{background:#0c3c5a;color:#fff;white-space:nowrap;padding:8px 10px}
+.tabela-agenda td{height:48px;background:#fff;position:relative}
+.tabela-agenda td.livre{background:#fff}
+.tabela-agenda td.reservado{background:#d9a4a4}
+.tabela-agenda td.reservado span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;color:#532f2f}
+.slot{display:block;width:100%;height:100%;background:transparent;border:none;cursor:pointer}
+.agenda-rodape{display:flex;gap:12px;justify-content:center;margin-bottom:24px}
+.semana-btn{background:#0c3f66;color:#fff;text-decoration:none;padding:8px 12px;border-radius:10px}
