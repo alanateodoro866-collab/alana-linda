@@ -1,6 +1,6 @@
 
 <?php
-require_once __DIR__ . '/../conexao.php';
+require_once __DIR__ . '/../crud/conexao.php';
 if (!isset($_SESSION['usuario'])) { header('Location: login.php'); exit; }
 $u = $_SESSION['usuario'];
 ?>

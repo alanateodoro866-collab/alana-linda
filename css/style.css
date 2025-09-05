@@ -1,10 +1,9 @@
-/* Reset simples */
+
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;color:#0c2b3c}
 
-/* Paleta aproximada das telas */
 :root{
-  --azul:#0e3b5c;       /* fundo principal */
+  --azul:#0e3b5c;       
   --azul-esc:#0a2b44;
   --azul-btn:#0c3f66;
   --azul-claro:#5593c6;
@@ -14,18 +13,19 @@ html,body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica 
   --amarelo:#f2c318;
 }
 
-/* Logo Space */
+
 .space-logo{font-weight:800;font-size:34px;letter-spacing:1px;color:#fff}
 .space-logo span{color:#8ec3ff}
 
-/* ---------- LOGIN ---------- */
+
 .login-body{background:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center}
 .login-container{width:980px;height:520px;display:grid;grid-template-columns:48% 52%;border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.08)}
 .login-left{background:var(--azul);position:relative;display:flex;align-items:flex-start;justify-content:flex-start;padding:24px}
 .login-left .space-logo{color:#fff}
 .curvas{position:absolute;inset:auto 0 0 auto;width:80%;height:80%;background:url('../img/curvas.png') no-repeat bottom right/contain;opacity:.9}
-.login-right{background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;gap:18px}
-.marista-logo img{height:80px}
+.login-right{background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:90px;gap:18px}
+.marista-logo img{height:80px;width:100%;
+}
 .login-form{width:100%;max-width:360px;display:flex;flex-direction:column;gap:10px}
 .login-form label{font-size:14px;color:#2a465b}
 .login-form input{border:none;background:#c6d3e5;border-radius:18px;padding:12px 16px;outline:none}
@@ -84,3 +84,38 @@ html,body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica 
 .slot{display:block;width:100%;height:100%;background:transparent;border:none;cursor:pointer}
 .agenda-rodape{display:flex;gap:12px;justify-content:center;margin-bottom:24px}
 .semana-btn{background:#0c3f66;color:#fff;text-decoration:none;padding:8px 12px;border-radius:10px}
+
+
+.login-left {
+  background: #0a2f57;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 60px 0 0 40px;
+  overflow: hidden; /* evita que as linhas passem da área */
+}
+
+/* Linhas coloridas */
+.login-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 400px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    #FFD43B 0px,   #FFD43B 6px,
+    transparent 6px, transparent 40px,
+    #FF6B6B 40px,  #FF6B6B 46px,
+    transparent 46px, transparent 80px,
+    #2482ad 80px,  #2482ad 86px,
+    transparent 86px, transparent 120px
+  );
+  opacity: 0.3; /* deixa mais suave */
+  transform: rotate(-10deg);
+}
+
